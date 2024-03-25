@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Volunteerstyle.css">
+    <script defer src="Volunteerscript.js"></script>
+    <title>Foodsharing Ottawa About Page</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="Main.html"><img src="https://foodsharingottawa.com/media/fso_package/PNG/FSO_Logo-horizontal.png?v2" alt="Foodsharing Ottawa Large Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Volunteer.html">Volunteer</a></li>
+                <li><a href="#">Donate Food</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <button onclick="openDonationPopup()">Donate</button>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Donation Popup Section -->
+    <div id="donationPopup" class="popup">
+                <section class="donation-form">
+                    <h2>Make a Donation</h2>
+                    <form action="process_donation.php" method="post">
+                        <!-- Donation amount -->
+                        <label for="amount">Amount:</label>
+                        <input type="number" name="amount" id="amount" step="0.01" required>
+            
+                        <!-- Donor information -->
+                        <label for="name">Full Name:</label>
+                        <input type="text" name="name" id="name" required>
+            
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+            
+                        <!-- Credit card information (you may need to integrate with a payment gateway) -->
+                        <label for="card">Credit Card Number:</label>
+                        <input type="text" name="card" id="card" required>
+            
+                        <label for="expiry">Expiry Date:</label>
+                        <input type="text" name="expiry" id="expiry" required>
+            
+                        <label for="cvv">CVV:</label>
+                        <input type="text" name="cvv" id="cvv" required>
+            
+                        <!-- Additional information, if needed -->
+                        <label for="message">Optional Message:</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+            
+                        <!-- Submit button -->
+                        <input type="submit" value="Donate">
+                    </form>
+            <button onclick="closeDonationPopup()">Close</button>
+        </section>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1>Volunteer with Us</h1> </div>
+                <div class="hero-text">
+                <p>Foodsharing Ottawa is volunteer driven. Join Foodsharing and help us increase our impact in our community.</p>
+
+                <p>Check out some of our main volunteer roles on this page, or contact us to find out more.</p>
+            </div>
+        </div>
+            <div class="hero-image">
+                <img src="https://foodsharingottawa.com/media/images/cherries.png" alt="Footer Logo">
+            </div>
+
+    </section>
+
+
+    <!-- Dark overlay for the popup -->
+    <div id="overlay" class="overlay"></div>
+
+    <section class="donors">
+        <div class="donors-content">
+            <div class="donors-text">
+                <h2 class="donors-title">Our Food Donors</h2>
+                <p>Foodsharing Ottawa has partnered with a wide range of businesses across Ottawa who generously donate their surplus or unwanted food.</p>
+                <h3>Is your organization interested in becoming a food donor?</h3>
+                <a href="#" class="donor-btn">Become a Food Donor</a>
+            </div>
+            <div class="donors-image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+            </div>
+        </div>
+    
+        <div class="donors-content">
+            <div class="donors-text">
+                <h2 class="donors-title">Our Food Recipients</h2>
+                <p>We donate food to charities and not-for-profit organizations in Ottawa, who re-distribute it to those in need.</p>
+                <h3>Is your organization interested in becoming a food recipient?</h3>
+                <a href="#" class="donor-btn">Become a Food Recipient</a>
+            </div>
+            <div class="donors-image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Food Donors Image">
+            </div>
+        </div>
+    </section>
+
+        
+    <!-- Our Team -->
+    <section class="information">
+        <h2 class="information-title">Our Team</h2>
+        <div class="information-content">
+            <!-- Information 1 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 1">
+                <div class="information-text">
+                    <p> Wendy Leung</p>
+                </div>
+            </div>
+
+            <!-- Information 2 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 2">
+                <div class="information-text">
+                    <p>Brandy Lekovic</p>
+                </div>
+            </div>
+
+            <!-- Information 3 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 3">
+                <div class="information-text">
+                    <p>Daphne Wahnon</p>
+                </div>
+            </div>
+
+            <!-- Information 4 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 4">
+                <div class="information-text">
+                    <p>Priya Sreeraman</p>
+                </div>
+            </div>
+            
+        </div>
+        <div class="information-content2">
+            <!-- Information 1 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 1">
+                <div class="information-text">
+                    <p> Caroline Bernard</p>
+                </div>
+            </div>
+
+            <!-- Information 2 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 2">
+                <div class="information-text">
+                    <p>Nkiru Udechukwu</p>
+                </div>
+            </div>
+
+            <!-- Information 3 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 3">
+                <div class="information-text">
+                    <p>Dennis Jarvis</p>
+                </div>
+            </div>
+
+            <!-- Information 4 -->
+            <div class="information-item">
+                <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Information 4">
+                <div class="information-text">
+                    <p>Helene Halpin</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="https://foodsharingottawa.com/media/fso_package/SVG/FSO_Stamp-all-white.svg" alt="Footer Logo">
+                </div>
+            </div>
+            <div class="footer-center">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Donate Food</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <!-- Social Links Section -->
+                <div class="footer-social">
+                    <!-- Instagram-->
+                    <img src="https://images.squarespace-cdn.com/content/v1/635097880056ec2033c025dc/07c9c303-0676-4dfa-a025-7d43e8f7c766/Instagram+Icon.png" alt="Instagram Logo">
+                </div>
+                <div class="footer-social-2">
+                    <!-- Facebook-->
+                    <img src="https://assets.stickpng.com/images/60fea6773d624000048712b5.png" alt="Facebook Logo">
+                </div>
+                <!-- Newsletter Section -->
+                <div class="footer-newsletter">
+                    <p>Join our Newsletter</p>
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

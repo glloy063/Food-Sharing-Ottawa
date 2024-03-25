@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Foodsharing Ottawa Main Page</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="Main.html"><img src="https://foodsharingottawa.com/media/fso_package/PNG/FSO_Logo-horizontal.png?v2" alt="Foodsharing Ottawa Large Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Volunteer.html">Volunteer</a></li>
+                <li><a href="#">Donate Food</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <button onclick="openDonationPopup()">Donate</button>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Donation Popup Section -->
+    <div id="donationPopup" class="popup">
+                <section class="donation-form">
+                    <h2>Make a Donation</h2>
+                    <form action="process_donation.php" method="post">
+                        <!-- Donation amount -->
+                        <label for="amount">Amount:</label>
+                        <input type="number" name="amount" id="amount" step="0.01" required>
+            
+                        <!-- Donor information -->
+                        <label for="name">Full Name:</label>
+                        <input type="text" name="name" id="name" required>
+            
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" required>
+            
+                        <!-- Credit card information (you may need to integrate with a payment gateway) -->
+                        <label for="card">Credit Card Number:</label>
+                        <input type="text" name="card" id="card" required>
+            
+                        <label for="expiry">Expiry Date:</label>
+                        <input type="text" name="expiry" id="expiry" required>
+            
+                        <label for="cvv">CVV:</label>
+                        <input type="text" name="cvv" id="cvv" required>
+            
+                        <!-- Additional information, if needed -->
+                        <label for="message">Optional Message:</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+            
+                        <!-- Submit button -->
+                        <input type="submit" value="Donate">
+                    </form>
+            <button onclick="closeDonationPopup()">Close</button>
+        </section>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Working together to reduce food waste in our community</h1>
+            <div class="hero-buttons">
+                <a href="Volunteer.html" class="hero-btn">Rescue Food</a>
+                <a href="#" class="hero-btn">Donate Food</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Hero Image">
+        </div>
+    </section>
+
+
+    <!-- Dark overlay for the popup -->
+    <div id="overlay" class="overlay"></div>
+
+    <section class="feature">
+        <h2 class="feature-title">Photos From the Community</h2>
+        <div class="feature-content">
+            <!-- Feature 1 -->
+            <div class="feature-item">
+                <img src="https://icons.veryicon.com/png/o/miscellaneous/forestry-in-yiliang/group-people.png" alt="Feature 1">
+                <div class="feature-text">
+                    <h3>Feature 1 Title</h3>
+                    <p>Feature 1 Description goes here.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-item">
+                <img src="https://icons.veryicon.com/png/o/miscellaneous/forestry-in-yiliang/group-people.png" alt="Feature 2">
+                <div class="feature-text">
+                    <h3>Feature 2 Title</h3>
+                    <p>Feature 2 Description goes here.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-item">
+                <img src="https://icons.veryicon.com/png/o/miscellaneous/forestry-in-yiliang/group-people.png" alt="Feature 3">
+                <div class="feature-text">
+                    <h3>Feature 3 Title</h3>
+                    <p>Feature 3 Description goes here.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="information">
+        <h2 class="information-title">Your Imapact Makes a Change</h2>
+        <div class="information-content">
+            <!-- Information 1 -->
+            <div class="information-item">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Information 1">
+                <div class="information-text">
+                    <h3>80</h3>
+                    <p> VOLUNTEERS</p>
+                </div>
+            </div>
+
+            <!-- Information 2 -->
+            <div class="information-item">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Information 2">
+                <div class="information-text">
+                    <h3>5000 LBS</h3>
+                    <p>RESCUED MONTHLY</p>
+                </div>
+            </div>
+
+            <!-- Information 3 -->
+            <div class="information-item">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Information 3">
+                <div class="information-text">
+                    <h3>20</h3>
+                    <p>REGULAR DONORS</p>
+                </div>
+            </div>
+
+            <!-- Information 4 -->
+            <div class="information-item">
+                <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Information 4">
+                <div class="information-text">
+                    <h3>32</h3>
+                    <p>CHARITIES</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <h2 class="content-title">How it works</h2>
+
+        <!-- First Image, Title, and Description Pair -->
+        <div class="content-item">
+            <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Content 1">
+            <div class="content-text">
+                <h3>Less food wasted.
+                    More food for those that need it!</h3>
+                <p>Our dedicated team of volunteers collects surplus food from our diverse group of donors. 
+                    These donors include local stores, restaurants, bakeries, hotels, and farmers' markets, all of whom share our goal of reducing food waste and supporting those in need. </p>
+                   
+                <p>Once collected, these donations are carefully sorted and distributed to various charities and organizations within our community.</p>
+            </div>
+        </div>
+
+        <!-- Second Image, Title, and Text Pair -->
+        <div class="content-item">
+            <div class="content-text">
+                <h3>Making an impact on the community.</h3>
+                <p>Through our collaborative efforts, we ensure that nutritious and wholesome food reaches those who need it most. By facilitating the donation and distribution process, 
+                    we not only prevent good food from going to waste but also create a sense of community and solidarity. </p>
+
+                <p>Together, we make a meaningful impact on the lives of individuals and families in the community.</p>
+            </div>
+            <img src="https://us.123rf.com/450wm/djvstock/djvstock2306/djvstock230611895/206467788-mountain-range-silhouette-shapes-horizon-backdrop.jpg?ver=6" alt="Content 2">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <img src="https://foodsharingottawa.com/media/fso_package/SVG/FSO_Stamp-all-white.svg" alt="Footer Logo">
+                </div>
+            </div>
+            <div class="footer-center">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Donate Food</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <!-- Social Links Section -->
+                <div class="footer-social">
+                    <!-- Instagram-->
+                    <img src="https://images.squarespace-cdn.com/content/v1/635097880056ec2033c025dc/07c9c303-0676-4dfa-a025-7d43e8f7c766/Instagram+Icon.png" alt="Instagram Logo">
+                </div>
+                <div class="footer-social-2">
+                    <!-- Facebook-->
+                    <img src="https://assets.stickpng.com/images/60fea6773d624000048712b5.png" alt="Facebook Logo">
+                </div>
+                <!-- Newsletter Section -->
+                <div class="footer-newsletter">
+                    <p>Join our Newsletter</p>
+                    <button class="newsletter-btn">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
